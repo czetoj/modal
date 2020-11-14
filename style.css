@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+   
+.modal {
+    padding: 1rem;
+    border: 2px solid lightgray;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    display: none;
+    z-index: 6;
+    background-color: cornsilk;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.modal__title {
+    margin-top: 1rem;
+}
+.modal__content {
+    padding: 1rem 0;
+}
+.modal__buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-modal {
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-modal:hover {
+    scale: 1.05;
+}
+.btn-any {
+    background-color: blueviolet;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-yes {
+    background-color: lightgreen;
+}
+.btn-yes:hover {
+    background-color: lime;
+}
+.btn-no {
+    background-color: lightsalmon;
+}
+.btn-no:hover {
+    background-color: red;
+}
+.modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal__close--bar1,
+.modal__close--bar2 {
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+}
+.modal__close--bar1 {
+    transform: rotate(45deg);
+}
+.modal__close--bar2 {
+    transform: rotate(90deg);
+}
+.modal__close--bar1:hover,
+.modal__close--bar2:hover {
+    scale: 1.1;
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+.fade-in {
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+.fade-out {
+    animation-name: fadeOutOpacity;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOutOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media(min-width: 560px) {
+    .modal {
+        width: 50%;
+    }
+}
