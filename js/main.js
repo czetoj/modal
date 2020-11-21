@@ -24,7 +24,7 @@ function fadeOut() {
     setTimeout(() => {
         backdrop.style.display = 'none';
         modal.style.display = 'none';
-    }, 2000)
+    }, 300)
 }
 
 

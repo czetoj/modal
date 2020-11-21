@@ -118,13 +118,13 @@ body {
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 2s;
+	animation-duration: .3s;
 }
 .fade-out {
     animation-name: fadeOutOpacity;
     animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 2s;
+	animation-duration: .3s;
 }
 
 @keyframes fadeInOpacity {
